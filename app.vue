@@ -13,7 +13,7 @@ useHead({
 
 <template>
   <div class="max-w-screen-lg mx-auto px-5">
-    <!-- <NuxtPage /> -->
+    <NuxtPage />
   </div>
   <footer class="bg-gray-900 py-10 mt-24 px-5">
     <div class="max-w-screen-sm mx-auto text-center text-lg text-gray-100">
