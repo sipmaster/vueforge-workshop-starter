@@ -18,5 +18,7 @@ export default defineNuxtConfig({
   modules: [
     "@twicpics/components/nuxt3"
   ],
-  
+  twicpics: {
+    domain: `https://tw2mmiur.twic.pics/`,
+  }
 })

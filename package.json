@@ -11,5 +11,9 @@
     "nuxt": "3.0.0-rc.6",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
+  },
+  "dependencies": {
+    "@nuxt/image-edge": "^1.0.0-27628766.3629b9a",
+    "@twicpics/components": "^0.8.2"
   }
 }
