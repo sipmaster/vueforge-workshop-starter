@@ -22,7 +22,7 @@ const productsToDisplay = computed(() => {
       <div class="h-20 mb-8 flex items-center justify-center">
         <div class="text-center font-semibold leading-tight">{{ product.title }}</div>
       </div>
-      <ProductImage :src="product.image" :alt="product.title" class="mx-auto" />
+      <ProductImage :src="product.image" :alt="product.title" class="mx-auto aspect-square" />
     </a>
   </div>
 </template>
