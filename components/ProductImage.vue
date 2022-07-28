@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { stringLiteral } from '@babel/types';
+
   const props = defineProps({
-    src: String
+    src: {type: String, required: true},
+    isLcp: {type: Boolean, default: false},
+    alt: {type: String, required: true}
   })
 
-  const { src } = toRefs(props)
+  const { src, isLcp } = toRefs(props)
 
   function toBlurryURL(imageURL) {
     const fileName = imageURL.replace("https://fakestoreapi.com/img","")
@@ -26,11 +30,23 @@
     const tpURL = toTwicPicsURL(src.value)
     return `${tpURL}`
   })
+
+  const attrs = computed(()=> {
+    if (isLcp.value === true) {
+      return {src: imageURL.value,}
+    }
+    return {
+      src: imageURL.value
+    }
+  })
 </script>
 
 <template>
   <!-- <div class="relative " style="padding-top: 100%" :style="backgroundStyle">
     <img :src=src v-bind="$attrs" class="absolute top-0 left-0 w-full h-full object-contain">
   </div> -->
+  <div v-if="isLcp" class="relative">
+    <nuxt-img v-bind="attrs" sizes="xs:300px sm:400px" :alt="alt" fit="inside" :preload="true" class="w-full h-full object-contain absolute inset-0" fetchpriority="high" />
+  </div>
   <TwicImg :src="imageURL" mode="contain" />
 </template>
