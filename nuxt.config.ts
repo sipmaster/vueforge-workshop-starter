@@ -16,5 +16,7 @@ export default defineNuxtConfig({
    * Your Nuxt modules will go there
    */
   modules: [
-  ]
+    "@twicpics/components/nuxt3"
+  ],
+  
 })
