@@ -20,5 +20,6 @@ export default defineNuxtConfig({
   ],
   twicpics: {
     domain: `https://tw2mmiur.twic.pics/`,
+    path: `tp-workshop`,
   }
 })

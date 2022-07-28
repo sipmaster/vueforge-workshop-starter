@@ -24,7 +24,7 @@
 
   const imageURL = computed(() => {
     const tpURL = toTwicPicsURL(src.value)
-    return `/tp-workshop/${tpURL}`
+    return `${tpURL}`
   })
 </script>
 
